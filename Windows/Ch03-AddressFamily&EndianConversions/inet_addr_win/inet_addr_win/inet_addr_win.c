@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 		// strPtr = inet_ntoa(addr.sin_addr);
 		// inet_addr과 마찬가지로 deprecated되어 곧 쓰지 않을 수 있음
 		// 따라서 inet_ntop() 또는 InetNtoP()를 사용할 것을 권장 -> header에 WS2tcpip.h 추가 필요
-		// ntop == network to pc / pton == pc to network
+		// ntop == network to pointer / pton == pointer to network
 		// pton때와 마찬가지로 #define _WINSOCK_DEPRECATED_NO_WARNINGS를 사용해도 되지만 권장하는 방법으로 구현
 		inet_ntop(AF_INET, &addr.sin_addr, strArr, sizeof(strArr));
 		printf("Dotted-Decimal notation %s\n", strArr);
