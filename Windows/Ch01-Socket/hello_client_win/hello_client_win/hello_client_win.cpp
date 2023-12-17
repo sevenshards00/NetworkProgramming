@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 	// servAddr.sin_addr.s_addr = inet_addr(argv[1]);
 	// 현재 iner_addr은 deprecated되어 곧 쓰지 않을 수 있음
 	// 따라서 inet_pton() 또는 InetPton()을 사용할 것을 권장 -> header파일로 WS2tcpip.h 추가 필요
-	// pton == pc to network / ntop == network to pc
+	// pton == pointer to network / ntop == network to pointer
 	// #define _WINSOCK_DEPRECATED_NO_WARNINGS를 사용해도 되지만 여기서는 권장하는 방법을 사용해보려고 함
 	// 반환값은 정수형
 	inet_pton(AF_INET, argv[1], &servAddr.sin_addr);
