@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 			break;
 		// 현 시점에서 문제가 되는 부분
 		// TCP 통신의 특성은 데이터의 경계가 없다는 것.
-		// 지금 코드는 패킷이 나눠져서 보내는 경우를 전혀 고려하지 않은 상
+		// 지금 코드는 패킷이 나눠져서 보내는 경우를 전혀 고려하지 않은 상황
 		write(sock, message, strlen(message));
 		str_len = read(sock, message, BUF_SIZE-1);
 		// 현 시점에서 문제가 되는 부분
