@@ -1,6 +1,6 @@
 /*
 * TCP/IP Socket Programming - UDP 기반 서버/클라이언트
-* 파일명: uecho_server.c
+* 파일명: uecho_client.c
 * 파일 버전: 0.1
 * 작성자: Sevenshards
 * 작성 일자: 2023-12-18
