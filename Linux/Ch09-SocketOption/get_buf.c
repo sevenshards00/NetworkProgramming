@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
     if(state)
         error_handling("getsockopt() error");
     
-    printf("Input buffet size: %d\n", rcv_buf);
+    printf("Input buffer size: %d\n", rcv_buf);
     printf("Output buffer size: %d\n", snd_buf);
     return 0;
 }
