@@ -1,6 +1,6 @@
 ﻿/*
 * TCP/IP Socket Programming - 도메인 이름(Domain Name)과 인터넷 주소(IP Address)
-* 파일명: gethostbyname_win.c
+* 파일명: getaddrinfo.c
 * 파일 버전: 0.1
 * 작성자: Sevenshards
 * 작성 일자: 2023-12-20
@@ -49,6 +49,8 @@ int main(int argc, char* argv[])
     printf("Address type: %s\n", (host->ai_family == AF_INET) ? "AF_INET" : "AF_INET6");
     while (host->ai_next != NULL)
     {
+        // IP주소는 sa_data의 두 번째 인덱스
+        // 나중에 여유가 된다면 sa_data의 인덱스별로 어떤 데이터가 있는지 알아볼 것
         inet_ntop(host->ai_family, (char*)&host->ai_addr->sa_data[2], ip_addr, sizeof(ip_addr));
         printf("IP Addr: %s\n", ip_addr);
         host = host->ai_next;
