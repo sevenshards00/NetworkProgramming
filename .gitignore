@@ -402,4 +402,9 @@ FodyWeavers.xsd
 *.i*86
 *.x86_64
 *.hex
-/Linux/Ch10-Multi-ProcessServer/wait
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
