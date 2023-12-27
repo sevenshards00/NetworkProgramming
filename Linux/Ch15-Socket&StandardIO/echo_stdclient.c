@@ -71,7 +71,9 @@ int main(int argc, char* argv[])
 	}
 	fclose(writefp);
 	fclose(readfp);
-	close(sock);
+	// 소켓을 닫을 필요가 없어짐
+	// 다음 챕터에서 다룰 내용이지만, 미리 적어둔다면 파일 스트림을 해제하면서 소켓도 같이 소멸
+	//close(sock);
 	return 0;
 }
 
