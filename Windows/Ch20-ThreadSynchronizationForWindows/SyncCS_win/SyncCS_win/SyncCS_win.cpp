@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
 		TRUE, // TRUE로 설정하면 모든 오브젝트가 Signaled 상태일 때 반환, FALSE로 설정하면 하나라도 Signaled 상태가 되면 반환
 		INFINITE // 계속 대기 (Blocking)
 	);
-
+	DeleteCriticalSection(&cs);
 	cout << "result: " << num << '\n';
 	return 0;
 }
