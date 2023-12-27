@@ -9,9 +9,11 @@
 * 이전 버전 내용:
 */
 
+#include <iostream>
 #include <cstdio>
 #include <Windows.h>
 #include <process.h>
+using std::cout;
 
 #define NUM_THREAD 50
 // unsigned == unsigned int
@@ -65,11 +67,7 @@ int main(int argc, char* argv[])
 		INFINITE // 계속 대기 (Blocking)
 	);
 
-	// 3항 연산자를 이용하여 값을 반환
-	// 쓰레드가 Signaled 상태가 되었다면 반환값이 WAIT_OBJECT_0을 반환
-	// 그게 아니라면 time-out으로 인한 WAIT_TIMEOUT이 반환
-	// INFINITE로 대기하기 때문에 계속 블로킹되므로 해당 값이 나올 일은 없음
-	printf("result: %lld\n", num);
+	cout << "result: "<< num << '\n';
 	return 0;
 }
 
