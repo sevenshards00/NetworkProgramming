@@ -93,6 +93,7 @@ int main(int argc, char* argv[])
                     puts("New Client Connected....");
                     // 새로 생성된 클라이언트와 연결된 소켓(파일 디스크립터)를 epoll 인스턴스에 추가로 등록한다
                     event.events = EPOLLIN;
+                    //event.events = EPOLLIN|EPOLLET; // Edge Trigger 모델의 이벤트 등록 방식을 보려면 해당 코드로 수행
                     event.data.fd = clnt_sock;
                     epoll_ctl(epfd, EPOLL_CTL_ADD, clnt_sock, &event);
                     printf("Connected Client: %d\n", clnt_sock);
