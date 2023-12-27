@@ -1,6 +1,6 @@
 /*
 * TCP/IP Socket Programming - 멀티쓰레드 기반의 서버 구현
-* 파일명: thread1.c
+* 파일명: thread2.c
 * 파일 버전: 0.1
 * 작성자: Sevenshards
 * 작성 일자: 2023-12-27
