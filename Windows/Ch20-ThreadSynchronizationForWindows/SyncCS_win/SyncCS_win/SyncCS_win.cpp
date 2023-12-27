@@ -69,6 +69,9 @@ int main(int argc, char* argv[])
 	);
 	DeleteCriticalSection(&cs);
 	cout << "result: " << num << '\n';
+	// 엄밀히 따지면 CloseHandle을 통해 쓰레드의 소멸을 확실하게 해야함
+	for (DWORD i = 0; i < NUM_THREAD; i++)
+		CloseHandle(tHandles[i]);
 	return 0;
 }
 
